@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>:: Registration Page ::</title>
+		<style type="text/css">
+			.container {
+				border: 1px solid #EAE8D9;
+				width: 40%;
+				margin-left:27% ;
+				margin-top: 4%;
+				/*font-family: sans-serif;*/
+				padding: 30px;
+				font-weight: 800;
+				font-family: italic, sans-serif;
+						}
+						h1 {
+							text-align: center;
+							font-family: italic, sans-serif;
+						}
+				input{
+					width: 98%;
+					padding: 10px;
+					background-color: #D9DAEA;
+					border: none;
+					border-radius: 5px;
+					margin:5px 0 20px 0;
+					font-family: italic, sans-serif;
+				}
+				.save{
+					background-color: green;
+					color: #fff;
+					width: 20%;
+					margin-top: 30px;
+					margin-left: 40%;
+					
+				}
+
+		</style>
+	</head>
+	<body style="background-image: url('../static/mountain-dome-background.jpg');">
+		<form action="{{ url_for('register')}}" method="POST" >
+			<div class="container">
+				<h1>Registration Page</h1>
+				<hr>
+				<label>UserName:
+					<input type="text" name="username" id="uname" placeholder="Enter UserName" required>
+				</label>
+				<label>Password:
+					<input type="password" name="password" id="pword" placeholder="Password" required>
+				</label>
+				<label>Email:
+					<input type="email" name="emailid" id="uemail" placeholder="Email" required>
+				</label>
+				<label>Mobilenumber:
+					<input type="number" name="Mobilenumber" id="mobile" placeholder="Mobilenumber" required>
+				</label>
+				<label>
+					<input type="submit" value="Register" class="save">
+				</label>
+			</div>
+		</form>
+	</body>
+</html>

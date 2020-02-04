@@ -1,0 +1,22 @@
+Html Task:
+==========
+  OS list
+	.Android versions
+		1.
+		2.
+		3.
+ 
+	WEb Technologies:
+		Html
+		Css
+		Bootstrap
+CSS selectors:
+
+1.By element name(h1- only single element )
+2.id 
+3.class
+4.grouping selector(h1,p,img,div)
+5.universal selector(*)
+
+
+

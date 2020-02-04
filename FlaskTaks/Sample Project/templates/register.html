@@ -1,0 +1,39 @@
+  <!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Page</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		  {% with messages = get_flashed_messages() %}  
+         {% if messages %}  
+               {% for message in messages %}  
+                    <h1>{{ message }}</h1>  
+               {% endfor %}  
+         {% endif %}  
+      {% endwith %}  
+		<div class="card-header bg-primary"><h2>form Example</h2>
+	</div>
+<form action="{{url_for('register')}}" method="post" class="padding-top-10">
+	<div class="card-body bg-secondary">
+	<label for="fname">fname:</label>
+	<input type="fname" class="form-control" id="fname" placeholder="enter fname" name="fname">
+    <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+     <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      <label for="Mno">Mobileno:</label>
+      <input type="mobileno" class="form-control" id="Mno" placeholder="Enter mobileno" name="Mno">
+     </div>
+     <div class="card-footer bg-info">
+     	<button type="sumbit" class="btn-btn-default">Register</button>
+     </div>
+ </form>
+</body>
+</html>

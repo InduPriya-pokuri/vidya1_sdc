@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>:: Login Page ::</title>
+		<style type="text/css">
+			.container {
+				border: 1px solid #EAE8D9;
+				width: 40%;
+				margin-left:28% ;
+				margin-top: 4%;
+				font-family:italic, sans-serif;
+				font-weight: 800;
+				padding: 10px;
+						}
+						h1 {
+							text-align: center;
+							font-family: italic, sans-serif;
+						}
+				input{
+					width: 97%;
+					padding: 10px;
+					background-color: #D9DAEA;
+					border: none;
+					border-radius: 5px;
+					margin:5px 0 20px 0;
+				}
+				.save{
+					background-color: green;
+					width: 20%;
+					margin-top: 10px;
+					margin-left: 40%;
+					color: #fff;
+				}
+		</style>
+	</head>
+	<body style="background-image: url('../static/mountain-dome-background.jpg');">
+		<form action="{{url_for('login')}}" method="POST">
+
+			<div class="container">
+				<h1>Login Page</h1>
+				<hr>
+				<label>Email:
+					<input type="email" name="emailid" id="uemail" placeholder="Email">
+				</label>
+				
+				<label>Password:
+					<input type="password" name="password" id="pword" placeholder="Password">
+				</label>
+				
+				<label>
+					<input type="submit" value="Login" class="save" >
+				</label>
+			</div>
+		</form>
+	</body>
+</html>
